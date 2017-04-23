@@ -6,9 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import com.apkfuns.logutils.LogUtils;
 
 import org.xyzmst.dagger2demo.component.DaggerFlowerComponent;
-import org.xyzmst.dagger2demo.component.DaggerMainActivityComponent;
-import org.xyzmst.dagger2demo.component.DaggerPotComponent;
 import org.xyzmst.dagger2demo.entity.Pot;
+import org.xyzmst.dagger2demo.module.PotModule;
 
 import javax.inject.Inject;
 
@@ -27,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DaggerMainActivityComponent.builder()
-                .potComponent(DaggerPotComponent.builder().flowerComponent(DaggerFlowerComponent.create()).build())
-                .build()
+        DaggerFlowerComponent.create()
+                .plus(new PotModule())
+                .plus()
                 .inject(this);
         LogUtils.d("mPot=" + mPot);
         LogUtils.d(mPot.show());

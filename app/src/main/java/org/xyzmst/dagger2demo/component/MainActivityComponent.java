@@ -2,7 +2,7 @@ package org.xyzmst.dagger2demo.component;
 
 import org.xyzmst.dagger2demo.MainActivity;
 
-import dagger.Component;
+import dagger.Subcomponent;
 
 /**
  * @author mac
@@ -12,7 +12,7 @@ import dagger.Component;
  * @date
  * @since 2017/4/23 11:15
  **/
-@Component(dependencies = PotComponent.class)
+@Subcomponent
 public interface MainActivityComponent {
     void inject(MainActivity activity);
 }

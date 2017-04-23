@@ -1,9 +1,7 @@
 package org.xyzmst.dagger2demo.component;
 
-import org.xyzmst.dagger2demo.entity.Flower;
 import org.xyzmst.dagger2demo.module.FlowerModule;
-import org.xyzmst.dagger2demo.qualifier.LilyFlower;
-import org.xyzmst.dagger2demo.qualifier.RoseFlower;
+import org.xyzmst.dagger2demo.module.PotModule;
 
 import dagger.Component;
 
@@ -18,9 +16,5 @@ import dagger.Component;
 @Component(modules = FlowerModule.class)
 public interface FlowerComponent {
 
-    @RoseFlower
-    Flower getRoseFlower();
-
-    @LilyFlower
-    Flower getLilyFlower();
+    PotComponent plus(PotModule potModule);
 }
