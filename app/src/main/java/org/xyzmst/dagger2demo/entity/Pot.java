@@ -2,22 +2,25 @@ package org.xyzmst.dagger2demo.entity;
 
 import com.apkfuns.logutils.LogUtils;
 
-import org.xyzmst.dagger2demo.qualifier.RoseFlower;
-
-import javax.inject.Inject;
-
+/**
+ * @author mac
+ * @title Pot
+ * @description
+ * @modifier
+ * @date
+ * @since 2017/4/23 11:12
+ **/
 public class Pot {
 
-    private Flower rose;
+    private Flower mRose;
 
-    @Inject
-    public Pot(@RoseFlower Flower rose) {
-        this.rose = rose;
-        LogUtils.i("Pot()");
+    public Pot(Flower rose) {
+        mRose = rose;
+        LogUtils.d("");
     }
 
     public String show() {
-        return rose.whisper();
-
+        return mRose.whisper();
     }
+
 }

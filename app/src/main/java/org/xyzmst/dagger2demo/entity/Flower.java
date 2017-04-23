@@ -6,8 +6,9 @@ package org.xyzmst.dagger2demo.entity;
  * @description
  * @modifier
  * @date
- * @since 2017/4/20 23:27
+ * @since 2017/4/23 11:42
  **/
 public abstract class Flower {
+
     public abstract String whisper();
 }

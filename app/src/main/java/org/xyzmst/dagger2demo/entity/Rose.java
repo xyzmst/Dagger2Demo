@@ -2,13 +2,18 @@ package org.xyzmst.dagger2demo.entity;
 
 import com.apkfuns.logutils.LogUtils;
 
-import javax.inject.Inject;
+/**
+ * @author mac
+ * @title Rose
+ * @description
+ * @modifier
+ * @date
+ * @since 2017/4/23 11:11
+ **/
+public class Rose extends Flower{
 
-public class Rose extends Flower {
-
-    @Inject
     public Rose() {
-        LogUtils.i("Rose()");
+        LogUtils.d("");
     }
 
     public String whisper() {

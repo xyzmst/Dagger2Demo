@@ -13,16 +13,14 @@ import dagger.Component;
  * @description
  * @modifier
  * @date
- * @since 2017/4/21 00:33
+ * @since 2017/4/23 12:19
  **/
 @Component(modules = FlowerModule.class)
 public interface FlowerComponent {
+
     @RoseFlower
     Flower getRoseFlower();
 
     @LilyFlower
     Flower getLilyFlower();
-
-//    PotComponent plus(PotModule potModule);
-
 }

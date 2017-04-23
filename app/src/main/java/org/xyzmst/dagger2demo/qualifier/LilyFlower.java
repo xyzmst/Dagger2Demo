@@ -11,9 +11,9 @@ import javax.inject.Qualifier;
  * @description
  * @modifier
  * @date
- * @since 2017/4/20 23:46
+ * @since 2017/4/23 12:08
  **/
 @Qualifier
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface LilyFlower {
 }

@@ -1,7 +1,5 @@
 package org.xyzmst.dagger2demo.module;
 
-import com.apkfuns.logutils.LogUtils;
-
 import org.xyzmst.dagger2demo.entity.Flower;
 import org.xyzmst.dagger2demo.entity.Lily;
 import org.xyzmst.dagger2demo.entity.Rose;
@@ -17,22 +15,21 @@ import dagger.Provides;
  * @description
  * @modifier
  * @date
- * @since 2017/4/20 23:34
+ * @since 2017/4/23 11:49
  **/
-
 @Module
 public class FlowerModule {
+
     @Provides
     @RoseFlower
-    Flower provideRose() {
-        LogUtils.i("provideRose()");
+    Flower provideRose(){
         return new Rose();
     }
 
     @Provides
     @LilyFlower
-    Flower provideLily() {
-        LogUtils.i("provideLily()");
+    Flower provideLily(){
         return new Lily();
     }
+
 }
