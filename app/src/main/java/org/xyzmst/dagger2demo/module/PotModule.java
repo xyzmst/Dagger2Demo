@@ -4,6 +4,8 @@ import org.xyzmst.dagger2demo.entity.Flower;
 import org.xyzmst.dagger2demo.entity.Pot;
 import org.xyzmst.dagger2demo.qualifier.RoseFlower;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -20,6 +22,7 @@ public class PotModule {
 
 
     @Provides
+    @Singleton
     Pot providePot(@RoseFlower Flower rose){
         return new Pot(rose);
     }
